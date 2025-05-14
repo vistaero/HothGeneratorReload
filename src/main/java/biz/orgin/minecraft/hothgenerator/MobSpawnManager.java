@@ -24,22 +24,22 @@ public class MobSpawnManager
 	private int taskId;
 	
 	private static Material[] spawnBlocks = new Material[]{
-		Material.GRASS,
-		Material.GRASS,
+		Material.GRASS_BLOCK,
+		Material.GRASS_BLOCK,
 		Material.MYCELIUM,
-		Material.GRASS,
-		Material.GRASS,
-		Material.GRASS,
-		Material.GRASS,
-                Material.GRASS,
-                Material.GRASS,
-		Material.GRASS
+		Material.GRASS_BLOCK,
+		Material.GRASS_BLOCK,
+		Material.GRASS_BLOCK,
+		Material.GRASS_BLOCK,
+                Material.GRASS_BLOCK,
+                Material.GRASS_BLOCK,
+		Material.GRASS_BLOCK
         };
 	
 	private static EntityType[] mobTypes = new EntityType[]{
 		EntityType.CHICKEN,
 		EntityType.COW,
-		EntityType.MUSHROOM_COW,
+		EntityType.MOOSHROOM,
 		EntityType.OCELOT,
 		EntityType.PIG,
 		EntityType.SHEEP,

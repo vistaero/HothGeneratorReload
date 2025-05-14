@@ -202,7 +202,7 @@ public class DagobahSpiderForestPopulator extends BlockPopulator
 		
 		if(mat.equals(Material.VINE)
 				|| mat.equals(Material.COBWEB)
-				|| mat.equals(Material.GRASS)
+				|| mat.equals(Material.GRASS_BLOCK)
 				|| mat.equals(Material.MYCELIUM)
 				|| mat.equals(Material.WATER)
 				|| mat.equals(Material.WATER)
@@ -221,7 +221,7 @@ public class DagobahSpiderForestPopulator extends BlockPopulator
 	private int getSurfaceLevel(Block block)
 	{
 		Material type = block.getType();
-		while(block.getY()>64 && !type.equals(Material.GRASS) && !type.equals(Material.DIRT)) //  && !type.equals(Material.STATIONARY_WATER))
+		while(block.getY()>64 && !type.equals(Material.GRASS_BLOCK) && !type.equals(Material.DIRT)) //  && !type.equals(Material.STATIONARY_WATER))
 		{
 			block = block.getRelative(BlockFace.DOWN);
 			type = block.getType();

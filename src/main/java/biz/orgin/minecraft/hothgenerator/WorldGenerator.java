@@ -1,5 +1,6 @@
 package biz.orgin.minecraft.hothgenerator;
 
+import io.papermc.paper.registry.RegistryKey;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -7,6 +8,7 @@ import me.zhehe.MagicIdHandler;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.World;
 import org.bukkit.block.Biome;
 import org.bukkit.block.data.BlockData;
@@ -135,48 +137,16 @@ public class WorldGenerator extends ChunkGenerator
 				
 				Biome biome = biomes.getBiome(x, z);
 				float factor = 1.0f;
-                            switch (biome) {
-                                case DESERT_HILLS:
-                                    factor = 2.0f;
-                                    break;
-                                case MOUNTAINS:
-                                    factor = 8.0f;
-                                    break;
-                                case WOODED_HILLS:
-                                    factor = 3.0f;
-                                    break;
-                                case SNOWY_MOUNTAINS:
-                                    factor = 5.0f;
-                                    break;
-                                case SNOWY_TUNDRA:
-                                    factor = 0.5f;
-                                    break;
-                                case FROZEN_OCEAN:
-                                    factor = 0.3f;
-                                    break;
-                                case FROZEN_RIVER:
-                                    factor = 0.3f;
-                                    break;
-                                case JUNGLE_HILLS:
-                                    factor = 3.0f;
-                                    break;
-                                case MUSHROOM_FIELDS:
-                                    factor = 1.5f;
-                                    break;
-                                case PLAINS:
-                                    factor = 0.5f;
-                                    break;
-                                case RIVER:
-                                    factor = 0.3f;
-                                    break;
-                                case MOUNTAIN_EDGE:
-                                    factor = 5.0f;
-                                    break;
-                                case TAIGA_HILLS:
-                                    factor = 3.0f;
-                                    break;
-                                default:
-                                    break;
+                                
+                            NamespacedKey key = biome.getKey();   // ej. "minecraft:plains"
+                            String name = key.getKey();                // quedaría "plains"
+                            switch (name) {
+                                case "frozen_ocean"    -> factor = 0.3f;
+                                case "frozen_river"    -> factor = 0.3f;
+                                case "mushroom_fields" -> factor = 1.5f;
+                                case "plains"          -> factor = 0.5f;
+                                case "river"           -> factor = 0.3f;
+                                default                -> { /* nada */ }
                             }
 				// BEDROCK Layer
 				int y = 0;
@@ -426,37 +396,13 @@ public class WorldGenerator extends ChunkGenerator
 				
 				Biome biome = biomes.getBiome(x, z);
 				float factor = 1.0f;
-				if(biome.equals(Biome.DESERT_HILLS))
-				{
-					factor = 2.0f;
-				}
-				else if(biome.equals(Biome.MOUNTAINS))
-				{
-					factor = 8.0f;
-				}
-				else if(biome.equals(Biome.WOODED_HILLS))
-				{
-					factor = 3.0f;
-				}
-				else if(biome.equals(Biome.SNOWY_MOUNTAINS))
-				{
-					factor = 5.0f;
-				}
-				else if(biome.equals(Biome.SNOWY_TUNDRA))
-				{
-					factor = 0.5f;
-				}
-				else if(biome.equals(Biome.FROZEN_OCEAN))
+				if(biome.equals(Biome.FROZEN_OCEAN))
 				{
 					factor = 0.3f;
 				}
 				else if(biome.equals(Biome.FROZEN_RIVER))
 				{
 					factor = 0.3f;
-				}
-				else if(biome.equals(Biome.JUNGLE_HILLS))
-				{
-					factor = 3.0f;
 				}
 				else if(biome.equals(Biome.MUSHROOM_FIELDS))
 				{
@@ -469,14 +415,6 @@ public class WorldGenerator extends ChunkGenerator
 				else if(biome.equals(Biome.RIVER))
 				{
 					factor = 0.3f;
-				}
-				else if(biome.equals(Biome.MOUNTAIN_EDGE))
-				{
-					factor = 5.0f;
-				}
-				else if(biome.equals(Biome.TAIGA_HILLS))
-				{
-					factor = 3.0f;
 				}
 				// BEDROCK Layer
 				int y = 0;
@@ -755,27 +693,7 @@ public class WorldGenerator extends ChunkGenerator
 				
 				Biome biome = biomes.getBiome(x, z);
 				float factor = 1.0f;
-				if(biome.equals(Biome.DESERT_HILLS))
-				{
-					factor = 2.0f;
-				}
-				else if(biome.equals(Biome.MOUNTAINS))
-				{
-					factor = 3.0f;
-				}
-				else if(biome.equals(Biome.WOODED_HILLS))
-				{
-					factor = 2.5f;
-				}
-				else if(biome.equals(Biome.SNOWY_MOUNTAINS))
-				{
-					factor = 3.0f;
-				}
-				else if(biome.equals(Biome.SNOWY_TUNDRA))
-				{
-					factor = 0.5f;
-				}
-				else if(biome.equals(Biome.FROZEN_OCEAN))
+				if(biome.equals(Biome.FROZEN_OCEAN))
 				{
 					factor = 1.3f;
 				}
@@ -783,17 +701,9 @@ public class WorldGenerator extends ChunkGenerator
 				{
 					factor = 0.3f;
 				}
-				else if(biome.equals(Biome.JUNGLE_HILLS))
-				{
-					factor = 1.6f;
-				}
 				else if(biome.equals(Biome.MUSHROOM_FIELDS))
 				{
 					factor = 2.0f;
-				}
-				else if(biome.equals(Biome.MUSHROOM_FIELD_SHORE))
-				{
-					factor = 1.0f;
 				}
 				else if(biome.equals(Biome.PLAINS))
 				{
@@ -802,14 +712,6 @@ public class WorldGenerator extends ChunkGenerator
 				else if(biome.equals(Biome.RIVER))
 				{
 					factor = 0.1f;
-				}
-				else if(biome.equals(Biome.MOUNTAIN_EDGE ))
-				{
-					factor = 2.8f;
-				}
-				else if(biome.equals(Biome.TAIGA_HILLS))
-				{
-					factor = 2.0f;
 				}
 				// BEDROCK Layer
 				int y = 0;
@@ -950,7 +852,7 @@ public class WorldGenerator extends ChunkGenerator
 				{
 					if(i==(int)(snowblocks + (dicey - (int)dicey))-1)
 					{
-						if(biome.equals(Biome.MUSHROOM_FIELDS) || biome.equals(Biome.MUSHROOM_FIELD_SHORE))
+						if(biome.equals(Biome.MUSHROOM_FIELDS))
 						{
 							HothUtils.setPos(chunk, x,y,z, Material.MYCELIUM);
 						}
@@ -1369,27 +1271,7 @@ public class WorldGenerator extends ChunkGenerator
 				
 				Biome biome = biomes.getBiome(x, z);
 				float factor = 1.0f;
-				if(biome.equals(Biome.DESERT_HILLS))
-				{
-					factor = 2.0f;
-				}
-				else if(biome.equals(Biome.MOUNTAINS))
-				{
-					factor = 3.0f;
-				}
-				else if(biome.equals(Biome.WOODED_HILLS))
-				{
-					factor = 2.5f;
-				}
-				else if(biome.equals(Biome.SNOWY_MOUNTAINS))
-				{
-					factor = 3.0f;
-				}
-				else if(biome.equals(Biome.SNOWY_TUNDRA))
-				{
-					factor = 0.5f;
-				}
-				else if(biome.equals(Biome.FROZEN_OCEAN))
+				if(biome.equals(Biome.FROZEN_OCEAN))
 				{
 					factor = 1.3f;
 				}
@@ -1397,17 +1279,9 @@ public class WorldGenerator extends ChunkGenerator
 				{
 					factor = 0.3f;
 				}
-				else if(biome.equals(Biome.JUNGLE_HILLS))
-				{
-					factor = 1.6f;
-				}
 				else if(biome.equals(Biome.MUSHROOM_FIELDS))
 				{
 					factor = 2.0f;
-				}
-				else if(biome.equals(Biome.MUSHROOM_FIELD_SHORE))
-				{
-					factor = 1.0f;
 				}
 				else if(biome.equals(Biome.PLAINS))
 				{
@@ -1416,14 +1290,6 @@ public class WorldGenerator extends ChunkGenerator
 				else if(biome.equals(Biome.RIVER))
 				{
 					factor = 0.1f;
-				}
-				else if(biome.equals(Biome.MOUNTAIN_EDGE))
-				{
-					factor = 2.8f;
-				}
-				else if(biome.equals(Biome.TAIGA_HILLS))
-				{
-					factor = 2.0f;
 				}
 				// BEDROCK Layer
 				int y = 0;
@@ -1475,27 +1341,7 @@ public class WorldGenerator extends ChunkGenerator
 				
 				Biome biome = biomes.getBiome(x, z);
 				float factor = 1.0f;
-				if(biome.equals(Biome.DESERT_HILLS))
-				{
-					factor = 2.0f;
-				}
-				else if(biome.equals(Biome.MOUNTAINS))
-				{
-					factor = 3.0f;
-				}
-				else if(biome.equals(Biome.WOODED_HILLS))
-				{
-					factor = 2.5f;
-				}
-				else if(biome.equals(Biome.SNOWY_MOUNTAINS))
-				{
-					factor = 3.0f;
-				}
-				else if(biome.equals(Biome.SNOWY_TUNDRA))
-				{
-					factor = 0.5f;
-				}
-				else if(biome.equals(Biome.FROZEN_OCEAN))
+				if(biome.equals(Biome.FROZEN_OCEAN))
 				{
 					factor = 1.3f;
 				}
@@ -1503,17 +1349,9 @@ public class WorldGenerator extends ChunkGenerator
 				{
 					factor = 0.3f;
 				}
-				else if(biome.equals(Biome.JUNGLE_HILLS))
-				{
-					factor = 1.6f;
-				}
 				else if(biome.equals(Biome.MUSHROOM_FIELDS))
 				{
 					factor = 2.0f;
-				}
-				else if(biome.equals(Biome.MUSHROOM_FIELD_SHORE))
-				{
-					factor = 1.0f;
 				}
 				else if(biome.equals(Biome.PLAINS))
 				{
@@ -1522,14 +1360,6 @@ public class WorldGenerator extends ChunkGenerator
 				else if(biome.equals(Biome.RIVER))
 				{
 					factor = 0.1f;
-				}
-				else if(biome.equals(Biome.MOUNTAIN_EDGE))
-				{
-					factor = 2.8f;
-				}
-				else if(biome.equals(Biome.TAIGA_HILLS))
-				{
-					factor = 2.0f;
 				}
 				// BEDROCK Layer
 				int y = 0;

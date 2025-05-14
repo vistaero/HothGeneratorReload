@@ -102,7 +102,7 @@ public class BlockPlaceManager implements Listener
 					Material type = block.getType();
 					if(HothUtils.isTooHot(block.getLocation(), 2))
 					{
-						if(type.equals(Material.GRASS))
+						if(type.equals(Material.GRASS_BLOCK))
 						{
 							BlockPlacerThread th = new BlockPlacerThread(world, block.getX(), block.getY(), block.getZ(), Material.GRASS_BLOCK, Material.DIRT);
 							plugin.addTask(th);

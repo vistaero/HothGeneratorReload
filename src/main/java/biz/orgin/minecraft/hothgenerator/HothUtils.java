@@ -891,7 +891,7 @@ public class HothUtils
 		Material type = block.getType();
 		return 
 				type.equals(Material.TALL_GRASS) ||
-                                type.equals(Material.GRASS) ||
+                                type.equals(Material.GRASS_BLOCK) ||
 				type.equals(Material.RED_MUSHROOM) ||
 				type.equals(Material.BROWN_MUSHROOM) ||
 				isSmallFlower(type) ||

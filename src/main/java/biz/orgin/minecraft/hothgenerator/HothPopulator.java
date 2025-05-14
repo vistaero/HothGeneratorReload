@@ -118,13 +118,7 @@ public class HothPopulator extends BlockPopulator
 			
 			Biome biome = world.getBiome(rx+x, rz+z);
 			
-			if(biome.equals(Biome.MOUNTAINS))
-			{
-				species = TreeSpecies.GENERIC;
-				material = this.getMaterialForSpecies(species);
-				addLog = prob<64;
-			}
-			else if(biome.equals(Biome.FOREST) || biome.equals(Biome.WOODED_HILLS))
+			if(biome.equals(Biome.FOREST))
 			{
 				species = this.getRandomSpecies(random);
 				material = this.getMaterialForSpecies(species);
@@ -136,7 +130,7 @@ public class HothPopulator extends BlockPopulator
 				material = this.getMaterialForSpecies(species);
 				addLog = prob<32;
 			}
-			else if(biome.equals(Biome.JUNGLE) || biome.equals(Biome.JUNGLE_HILLS))
+			else if(biome.equals(Biome.JUNGLE))
 			{
 				species = TreeSpecies.JUNGLE;
 				material = this.getMaterialForSpecies(species);
@@ -148,13 +142,13 @@ public class HothPopulator extends BlockPopulator
 				material = this.getMaterialForSpecies(species);
 				addLog = prob<128;
 			}
-			else if(biome.equals(Biome.TAIGA) || biome.equals(Biome.TAIGA_HILLS))
+			else if(biome.equals(Biome.TAIGA))
 			{
 				species = TreeSpecies.GENERIC;
 				material = this.getMaterialForSpecies(species);
 				addLog = prob<32;
 			}
-			else if(biome.equals(Biome.DARK_FOREST) || biome.equals(Biome.DARK_FOREST_HILLS))
+			else if(biome.equals(Biome.DARK_FOREST))
 			{
 				species = TreeSpecies.DARK_OAK;
 				material = this.getMaterialForSpecies(species);

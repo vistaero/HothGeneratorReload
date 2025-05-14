@@ -171,7 +171,7 @@ public class DagobahTreeHutPopulator extends BlockPopulator
 	private int getSurfaceLevel(Block block)
 	{
 		Material type = block.getType();
-		while(block.getY()>5 && !type.equals(Material.GRASS) && !type.equals(Material.DIRT) && !type.equals(Material.WATER))
+		while(block.getY()>5 && !type.equals(Material.GRASS_BLOCK) && !type.equals(Material.DIRT) && !type.equals(Material.WATER))
 		{
 			block = block.getRelative(BlockFace.DOWN);
 			type = block.getType();

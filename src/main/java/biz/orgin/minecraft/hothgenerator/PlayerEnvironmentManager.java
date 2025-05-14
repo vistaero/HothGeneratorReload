@@ -228,7 +228,7 @@ public class PlayerEnvironmentManager
 							{
 							case 0: // ok
 								Block block3 = block2.getRelative(BlockFace.DOWN);
-								if(block3.getType().equals(Material.GRASS))
+								if(block3.getType().equals(Material.GRASS_BLOCK))
 								{
 									int rand = this.random.nextInt(20*rarity); // attacks are completely random
 									

@@ -63,11 +63,7 @@ public class TatooinePopulator extends BlockPopulator
 			
 			Biome biome = world.getBiome(rx+x, rz+z);
 			
-			if(biome.equals(Biome.MOUNTAINS))
-			{
-				ran = random.nextInt(16);
-			}
-			else if(biome.equals(Biome.FOREST) || biome.equals(Biome.WOODED_HILLS))
+                        if(biome.equals(Biome.FOREST))
 			{
 				ran = random.nextInt(3);
 			}
@@ -75,7 +71,7 @@ public class TatooinePopulator extends BlockPopulator
 			{
 				ran = random.nextInt(10);
 			}
-			else if(biome.equals(Biome.JUNGLE) || biome.equals(Biome.JUNGLE_HILLS))
+			else if(biome.equals(Biome.JUNGLE))
 			{
 				ran = random.nextInt(2);
 			}
@@ -83,11 +79,11 @@ public class TatooinePopulator extends BlockPopulator
 			{
 				ran = random.nextInt(8);
 			}
-			else if(biome.equals(Biome.TAIGA) || biome.equals(Biome.TAIGA_HILLS))
+			else if(biome.equals(Biome.TAIGA))
 			{
 				ran = random.nextInt(20);
 			}
-			else if(biome.equals(Biome.DARK_FOREST) || biome.equals(Biome.DARK_FOREST_HILLS))
+			else if(biome.equals(Biome.DARK_FOREST))
 			{
 				ran = random.nextInt(6);
 			}			
@@ -124,11 +120,7 @@ public class TatooinePopulator extends BlockPopulator
 			
 			Biome biome = world.getBiome(rx+x, rz+z);
 			
-			if(biome.equals(Biome.MOUNTAINS))
-			{
-				ran = random.nextInt(16);
-			}
-			else if(biome.equals(Biome.FOREST) || biome.equals(Biome.WOODED_HILLS))
+			if(biome.equals(Biome.FOREST))
 			{
 				ran = random.nextInt(6);
 			}
@@ -136,7 +128,7 @@ public class TatooinePopulator extends BlockPopulator
 			{
 				ran = random.nextInt(20);
 			}
-			else if(biome.equals(Biome.JUNGLE) || biome.equals(Biome.JUNGLE_HILLS))
+			else if(biome.equals(Biome.JUNGLE))
 			{
 				ran = random.nextInt(3);
 			}
@@ -144,11 +136,11 @@ public class TatooinePopulator extends BlockPopulator
 			{
 				ran = random.nextInt(14);
 			}
-			else if(biome.equals(Biome.TAIGA) || biome.equals(Biome.TAIGA_HILLS))
+			else if(biome.equals(Biome.TAIGA))
 			{
 				ran = random.nextInt(12);
 			}
-			else if(biome.equals(Biome.DARK_FOREST) || biome.equals(Biome.DARK_FOREST_HILLS))
+			else if(biome.equals(Biome.DARK_FOREST))
 			{
 				ran = random.nextInt(7);
 			}			

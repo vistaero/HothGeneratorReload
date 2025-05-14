@@ -348,258 +348,138 @@ public class EntityTypeManager
 	//@SuppressWarnings("deprecation")
 	public static EntityType toEntityType(int id)
 	{
-		if(id==1)
-		{
-			return EntityType.DROPPED_ITEM;
-		}
-		else if(id==2)
-		{
-			return EntityType.EXPERIENCE_ORB;
-		}
-		else if(id==8)
-		{
-			return EntityType.LEASH_HITCH;
-		}
-		else if(id==9)
-		{
-			return EntityType.PAINTING;
-		}
-		else if(id==10)
-		{
-			return EntityType.ARROW;
-		}
-		else if(id==11)
-		{
-			return EntityType.SNOWBALL;
-		}
-		else if(id==12)
-		{
-			return EntityType.FIREBALL;
-		}
-		else if(id==13)
-		{
-			return EntityType.SMALL_FIREBALL;
-		}
-		else if(id==14)
-		{
-			return EntityType.ENDER_PEARL;
-		}
-		else if(id==15)
-		{
-			return EntityType.ENDER_SIGNAL;
-		}
-		else if(id==17)
-		{
-			return EntityType.THROWN_EXP_BOTTLE;
-		}
-		else if(id==18)
-		{
-			return EntityType.ITEM_FRAME;
-		}
-		else if(id==19)
-		{
-			return EntityType.WITHER_SKULL;
-		}
-		else if(id==20)
-		{
-			return EntityType.PRIMED_TNT;
-		}
-		else if(id==21)
-		{
-			return EntityType.FALLING_BLOCK;
-		}
-		else if(id==22)
-		{
-			return EntityType.FIREWORK;
-		}
-		else if(id==23)
-		{
-			return EntityType.SPECTRAL_ARROW;
-		}
-		else if(id==24)
-		{
-			return EntityType.SPECTRAL_ARROW;
-		}
-		else if(id==25)
-		{
-			return EntityType.SHULKER_BULLET;
-		}
-		else if(id==26)
-		{
-			return EntityType.DRAGON_FIREBALL;
-		}
-		else if(id==30)
-		{
-			return EntityType.ARMOR_STAND;
-		}
-		else if(id==40)
-		{
-			return EntityType.MINECART_COMMAND;
-		}
-		else if(id==41)
-		{
-			return EntityType.BOAT;
-		}
-		else if(id==42)
-		{
-			return EntityType.MINECART;
-		}
-		else if(id==43)
-		{
-			return EntityType.MINECART_CHEST;
-		}
-		else if(id==44)
-		{
-			return EntityType.MINECART_FURNACE;
-		}
-		else if(id==45)
-		{
-			return EntityType.MINECART_TNT;
-		}
-		else if(id==46)
-		{
-			return EntityType.MINECART_HOPPER;
-		}
-		else if(id==47)
-		{
-			return EntityType.MINECART_MOB_SPAWNER;
-		}
-		else if(id==50)
-		{
-			return EntityType.CREEPER;
-		}
-		else if(id==51)
-		{
-			return EntityType.SKELETON;
-		}
-		else if(id==52)
-		{
-			return EntityType.SPIDER;
-		}
-		else if(id==53)
-		{
-			return EntityType.GIANT;
-		}
-		else if(id==54)
-		{
-			return EntityType.ZOMBIE;
-		}
-		else if(id==55)
-		{
-			return EntityType.SLIME;
-		}
-		else if(id==56)
-		{
-			return EntityType.GHAST;
-		}
-		else if(id==57)
-		{
-			return EntityType.PIG_ZOMBIE;
-		}
-		else if(id==58)
-		{
-			return EntityType.ENDERMAN;
-		}
-		else if(id==59)
-		{
-			return EntityType.CAVE_SPIDER;
-		}
-		else if(id==60)
-		{
-			return EntityType.SILVERFISH;
-		}
-		else if(id==61)
-		{
-			return EntityType.BLAZE;
-		}
-		else if(id==62)
-		{
-			return EntityType.MAGMA_CUBE;
-		}
-		else if(id==63)
-		{
-			return EntityType.ENDER_DRAGON;
-		}
-		else if(id==64)
-		{
-			return EntityType.WITHER;
-		}
-		else if(id==65)
-		{
-			return EntityType.BAT;
-		}
-		else if(id==66)
-		{
-			return EntityType.WITCH;
-		}
-		else if(id==67)
-		{
-			return EntityType.ENDERMITE;
-		}
-		else if(id==68)
-		{
-			return EntityType.GUARDIAN;
-		}
-		else if(id==69)
-		{
-			return EntityType.SHULKER;
-		}
-		else if(id==90)
-		{
-			return EntityType.PIG;
-		}
-		else if(id==91)
-		{
-			return EntityType.SHEEP;
-		}
-		else if(id==92)
-		{
-			return EntityType.COW;
-		}
-		else if(id==93)
-		{
-			return EntityType.CHICKEN;
-		}
-		else if(id==94)
-		{
-			return EntityType.SQUID;
-		}
-		else if(id==95)
-		{
-			return EntityType.WOLF;
-		}
-		else if(id==96)
-		{
-			return EntityType.MUSHROOM_COW;
-		}
-		else if(id==97)
-		{
-			return EntityType.SNOWMAN;
-		}
-		else if(id==98)
-		{
-			return EntityType.OCELOT;
-		}
-		else if(id==99)
-		{
-			return EntityType.IRON_GOLEM;
-		}
-		else if(id==100)
-		{
-			return EntityType.HORSE;
-		}
-		else if(id==101)
-		{
-			return EntityType.RABBIT;
-		}
-		else if(id==120)
-		{
-			return EntityType.VILLAGER;
-		}
-		else if(id==200)
-		{
-			return EntityType.ENDER_CRYSTAL;
-		}
-		return EntityType.fromId(id);
+            return EntityType.fromId(id);
+            /*
+            switch (id) {
+                case 1:
+                    return EntityType.ITEM;
+                case 2:
+                    return EntityType.EXPERIENCE_ORB;
+                case 8:
+                    return EntityType.LEASH_KNOT;
+                case 9:
+                    return EntityType.PAINTING;
+                case 10:
+                    return EntityType.ARROW;
+                case 11:
+                    return EntityType.SNOWBALL;
+                case 12:
+                    return EntityType.FIREBALL;
+                case 13:
+                    return EntityType.SMALL_FIREBALL;
+                case 14:
+                    return EntityType.ENDER_PEARL;
+                case 15:
+                    return EntityType.EYE_OF_ENDER;
+                case 17:
+                    return EntityType.EXPERIENCE_BOTTLE;
+                case 18:
+                    return EntityType.ITEM_FRAME;
+                case 19:
+                    return EntityType.WITHER_SKULL;
+                case 20:
+                    return EntityType.TNT;
+                case 21:
+                    return EntityType.FALLING_BLOCK;
+                case 22:
+                    return EntityType.FIREWORK_ROCKET;
+                case 23:
+                    return EntityType.SPECTRAL_ARROW;
+                case 24:
+                    return EntityType.SPECTRAL_ARROW;
+                case 25:
+                    return EntityType.SHULKER_BULLET;
+                case 26:
+                    return EntityType.DRAGON_FIREBALL;
+                case 30:
+                    return EntityType.ARMOR_STAND;
+                case 40:
+                    return EntityType.MINECART_COMMAND;
+                case 41:
+                    return EntityType.BOAT;
+                case 42:
+                    return EntityType.MINECART;
+                case 43:
+                    return EntityType.MINECART_CHEST;
+                case 44:
+                    return EntityType.MINECART_FURNACE;
+                case 45:
+                    return EntityType.MINECART_TNT;
+                case 46:
+                    return EntityType.MINECART_HOPPER;
+                case 47:
+                    return EntityType.MINECART_MOB_SPAWNER;
+                case 50:
+                    return EntityType.CREEPER;
+                case 51:
+                    return EntityType.SKELETON;
+                case 52:
+                    return EntityType.SPIDER;
+                case 53:
+                    return EntityType.GIANT;
+                case 54:
+                    return EntityType.ZOMBIE;
+                case 55:
+                    return EntityType.SLIME;
+                case 56:
+                    return EntityType.GHAST;
+                case 57:
+                    return EntityType.PIG_ZOMBIE;
+                case 58:
+                    return EntityType.ENDERMAN;
+                case 59:
+                    return EntityType.CAVE_SPIDER;
+                case 60:
+                    return EntityType.SILVERFISH;
+                case 61:
+                    return EntityType.BLAZE;
+                case 62:
+                    return EntityType.MAGMA_CUBE;
+                case 63:
+                    return EntityType.ENDER_DRAGON;
+                case 64:
+                    return EntityType.WITHER;
+                case 65:
+                    return EntityType.BAT;
+                case 66:
+                    return EntityType.WITCH;
+                case 67:
+                    return EntityType.ENDERMITE;
+                case 68:
+                    return EntityType.GUARDIAN;
+                case 69:
+                    return EntityType.SHULKER;
+                case 90:
+                    return EntityType.PIG;
+                case 91:
+                    return EntityType.SHEEP;
+                case 92:
+                    return EntityType.COW;
+                case 93:
+                    return EntityType.CHICKEN;
+                case 94:
+                    return EntityType.SQUID;
+                case 95:
+                    return EntityType.WOLF;
+                case 96:
+                    return EntityType.MUSHROOM_COW;
+                case 97:
+                    return EntityType.SNOWMAN;
+                case 98:
+                    return EntityType.OCELOT;
+                case 99:
+                    return EntityType.IRON_GOLEM;
+                case 100:
+                    return EntityType.HORSE;
+                case 101:
+                    return EntityType.RABBIT;
+                case 120:
+                    return EntityType.VILLAGER;
+                case 200:
+                    return EntityType.ENDER_CRYSTAL;
+                default:
+                    break;
+            }
+		return EntityType.fromId(id);*/
 	}
 }

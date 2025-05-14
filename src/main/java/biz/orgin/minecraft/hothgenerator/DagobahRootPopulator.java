@@ -53,7 +53,7 @@ public class DagobahRootPopulator  extends BlockPopulator
 		
 		Biome biome = world.getBiome(x, z);
 		
-		if(!biome.equals(Biome.MUSHROOM_FIELDS) && !biome.equals(Biome.MUSHROOM_FIELD_SHORE))
+		if(!biome.equals(Biome.MUSHROOM_FIELDS))
 		{
 
 		

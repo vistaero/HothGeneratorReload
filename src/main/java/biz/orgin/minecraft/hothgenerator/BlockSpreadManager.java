@@ -43,7 +43,7 @@ public class BlockSpreadManager implements Listener
 					int maxy2 = world.getHighestBlockYAt(block2.getLocation());
 					Material type = block.getType();
 		
-					if(type.equals(Material.GRASS) || type.equals(Material.MYCELIUM))
+					if(type.equals(Material.GRASS_BLOCK) || type.equals(Material.MYCELIUM))
 					{
 						// Check both source block and destination
 						boolean exposed = Math.abs(maxy-block.getY())<2;
@@ -64,7 +64,7 @@ public class BlockSpreadManager implements Listener
 					Block block2 = event.getBlock();
 					Material type = block.getType();
 					
-					if(type.equals(Material.GRASS) || type.equals(Material.MYCELIUM) || type.equals(Material.VINE))
+					if(type.equals(Material.GRASS_BLOCK) || type.equals(Material.MYCELIUM) || type.equals(Material.VINE))
 					{
 						if(HothUtils.isTooHot(block2.getLocation(), 2) || HothUtils.isTooHot(block.getLocation(), 2))
 						{	// Don't spread into too hot blocks

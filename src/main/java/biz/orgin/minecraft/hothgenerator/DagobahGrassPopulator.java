@@ -93,7 +93,7 @@ public class DagobahGrassPopulator extends BlockPopulator
                                                             state.update(true, false);
                                                         } else {
                                                             BlockState state = block.getState();
-                                                            state.setType(Material.GRASS);
+                                                            state.setType(Material.GRASS_BLOCK);
                                                             state.update(true, false);
                                                         }
 						}
